@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+  	<groupId>com.wet.featsoflove</groupId>
+  	<artifactId>featsoflove</artifactId>
+  	<packaging>pom</packaging>
+
+  	<name>Feats of Love</name>
+  	<description>Parent aggregator project to build modules to support the Feats of Love application</description>
+
+  	<parent>
+    	<groupId>com.wet.api</groupId>
+    	<artifactId>applications</artifactId>
+    	<version>01.00.00.00-SNAPSHOT</version>    
+  	</parent>
+  
+  	<dependencyManagement>
+    	<dependencies>
+    		<dependency>
+        		<groupId>${project.groupId}</groupId>
+        		<artifactId>featsoflove-model</artifactId>
+        		<version>${project.version}</version>
+      		</dependency>
+    		<dependency>
+        		<groupId>${project.groupId}</groupId>
+        		<artifactId>featsoflove-service</artifactId>
+        		<version>${project.version}</version>
+      		</dependency>
+      		<dependency>
+        		<groupId>${project.groupId}</groupId>
+        		<artifactId>featsoflove-web</artifactId>
+        		<version>${project.version}</version>
+      		</dependency>
+    	</dependencies>  
+    </dependencyManagement>
+
+  	<modules>
+        <module>featsoflove-model</module>
+  		<module>featsoflove-service</module>
+    	<module>featsoflove-web</module>
+	</modules>
+    
+
+</project>
