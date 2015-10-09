@@ -11,6 +11,18 @@
       <id>nexus</id>
       <repositories>
         <repository>
+          <id>wet-snapshot-framework</id>
+          <name>West Enterprise Technologies Snapshot Framework Repository</name>
+          <url>http://nexus-westenterprise.rhcloud.com/nexus/content/repositories/wet-snapshot-framework/</url>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+        <repository>
           <id>eap</id>
           <url>http://maven.repository.redhat.com/techpreview/all</url>
           <releases><enabled>true</enabled></releases>
