@@ -12,7 +12,7 @@
   <parent>
     <groupId>com.wet.api</groupId>
     <artifactId>framework</artifactId>
-    <version>01.00.00.00</version>    
+    <version>01.00.00.00-SNAPSHOT</version>    
   </parent>
 
   <modules>
