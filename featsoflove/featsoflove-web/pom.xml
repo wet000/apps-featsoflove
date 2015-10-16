@@ -19,6 +19,14 @@
     </properties>
 
     <dependencies>
+    	<!-- West Enterprise Technologies API Dependecies -->
+      <dependency>
+        <groupId>com.wet.api</groupId>
+        <artifactId>notification-service</artifactId>
+      </dependency>
+
+
+        <!-- Other Dependencies -->
     	<!-- Spring Dependecies -->
     	<!--#<dependency>
 			<groupId>org.springframework</groupId>

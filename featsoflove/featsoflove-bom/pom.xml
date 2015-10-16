@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.wet.featsoflove</groupId>
+  <artifactId>featsoflove-bom</artifactId>
+  <version>01.00.00.00-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Feats of Love BOM (Bill of Materials)</name>
+  <description>BOM for easy dependency management of Feats of Love dependencies</description>
+
+  <parent>
+    <groupId>com.wet.api</groupId>
+    <artifactId>common-bom</artifactId>
+    <version>01.00.00.00-SNAPSHOT</version>
+    <relativePath></relativePath>
+  </parent>
+
+  <properties>
+    <featsoflove.model.version>01.00.00.00-SNAPSHOT</featsoflove.model.version>
+    <featsoflove.service.version>01.00.00.00-SNAPSHOT</featsoflove.service.version>
+    <notification.model.version>01.00.00.00-SNAPSHOT</notification.model.version>
+    <notification.service.version>01.00.00.00-SNAPSHOT</notification.service.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Feats of Love Dependencies -->
+      <dependency>
+        <groupId>com.wet.featsoflove</groupId>
+        <artifactId>featsoflove-model</artifactId>
+        <version>${featsoflove.model.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.wet.featsoflove</groupId>
+        <artifactId>featsoflove-service</artifactId>
+        <version>${featsoflove.service.version}</version>
+      </dependency>
+
+      <!-- West Enterprise API Dependencies -->
+      <dependency>
+        <groupId>com.wet.api</groupId>
+        <artifactId>notification-model</artifactId>
+        <version>${notification.model.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.wet.api</groupId>
+        <artifactId>notification-service</artifactId>
+        <version>${notification.service.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>

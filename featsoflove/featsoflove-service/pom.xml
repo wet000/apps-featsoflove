@@ -19,21 +19,6 @@
     </properties>
 
     <dependencies>
-    	<!-- West Enterprise Dependencies -->
-    	<dependency>
-    		<groupId>com.wet.api</groupId>
-    		<artifactId>common-service</artifactId>
-    	</dependency>
-    	
-    	<!-- Other Dependencies -->
-    	<dependency>
-    		<groupId>javax.inject</groupId>
-    		<artifactId>javax.inject</artifactId>
-  		</dependency>
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-        </dependency>
     </dependencies>
 
 </project>
