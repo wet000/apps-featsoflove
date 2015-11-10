@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -14,18 +15,15 @@
 				<p id="front-cover-p1" class="l40 text-shadow-dark1">Coming Soon!</p>
 				<p id="front-cover-p2" class="l15 w1 text-shadow-dark3">Creating Solutions to Fight Chronic Diseases</p>
 				<p class="l25 text-shadow-dark2">Be Part of the Solution</p>
-				<form:form method="post">
-					<input type="text" name="email" value="Enter Your Email"/>
-    				<form:errors path="email" cssclass="unsuccessful-message"></form:errors>
-					
+				<form:form commandName="subscriber" method="post">
+					<form:input path="email"/>
+					<form:hidden path="formId" value="11"/>
 					<input type="submit" value="Find Out How"/>
-					<input type="hidden" name="formId" value="11"/>
-					
-					
+					<p><form:errors class="unsuccessful-message" path="email"></form:errors></p>					
 				</form:form>
-				<p>Locale:  ${pageContext.response.locale}</p>
-				<p>Title: <spring:message code="featsoflove.title"/></p>
-				<!-- <p class="${messageClass}">${message}</p>-->
+				<c:if test="${subscriber.active}">
+					<p class="successful-message"><spring:message code="success.message"/></p>
+				</c:if>
 			</div>
 		</div>
 		<jsp:include page="footer.jsp" />
