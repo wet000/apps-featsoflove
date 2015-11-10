@@ -1,12 +1,7 @@
 package com.wet.featsoflove;
 
-import java.security.Principal;
-import java.util.Iterator;
-
-import javax.persistence.PersistenceException;
 import javax.validation.Valid;
 
-import org.hibernate.exception.GenericJDBCException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -18,8 +13,6 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import org.springframework.validation.BindingResult;
@@ -33,51 +26,35 @@ import com.wet.api.notification.service.SubscriberService;
 @RequestMapping(value={"","/","/home"})
 public class FeatsOfLoveController
 {
-	private final static String SUCCESSFUL_SUBSCRIBE_MESSAGE = "Thank You! We will keep you informed.";
 	private final static String UNSUCCESSFUL_SUBSCRIBE_MESSAGE = "Please enter a valid email address.";
-	private final static String SUCCESSFUL_MESSAGE_CLASS = "successful-message";
 	private final static String UNSUCCESSFUL_MESSAGE_CLASS = "unsuccessful-message";
 	
-//	@Autowired
-//	private Validator validator;
-//
-//	@InitBinder
-//	protected void initBinder(WebDataBinder binder) 
-//	{
-//		binder.setValidator(validator);
-//	}
+	@Autowired
+	private Validator validator;
+
+	@InitBinder
+	protected void initBinder(WebDataBinder binder) 
+	{
+		binder.setValidator(validator);
+	}
 	
 	@Autowired
 	SubscriberService subscriberService;
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public String home()
+	public String home(Model model)
 	{	
+		model.addAttribute("subscriber", new Subscriber());
 		return "home";
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
-	public String subscribe(@Valid @ModelAttribute Subscriber subscriber, BindingResult result,
-							@RequestParam("email") String email, @RequestParam("formId") short formId, Model model)
+	public String subscribe(@Valid @ModelAttribute("subscriber") Subscriber subscriber, BindingResult result)
 	{
-		//Subscriber subscriber = new Subscriber();
-		subscriber.setFormId(formId);
-		subscriber.setEmail(email);
-		
-		subscriberService.subscribeAndConfirm(subscriber);
-		
-//		 errors = result.getAllErrors();
-//	    for (FieldError error : errors ) {
-//	        System.out.println (error.getObjectName() + " - " + error.getDefaultMessage());
-//	    }
-//		
-//		
-//		//model.addAttribute("message", result.);
-//		model.addAttribute("messageClass", SUCCESSFUL_MESSAGE_CLASS);
-		
-		// TODO: Use in exception handling and when verification fails
-		//model.addAttribute("message", UNSUCCESSFUL_SUBSCRIBE_MESSAGE);
-		//model.addAttribute("messageClass", UNSUCCESSFUL_MESSAGE_CLASS);
+		if (!result.hasErrors()) 
+		{
+			subscriberService.subscribeAndConfirm(subscriber);
+        }
 		
 		return "home";
 	}
