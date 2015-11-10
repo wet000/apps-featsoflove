@@ -20,8 +20,7 @@
   <properties>
     <featsoflove.model.version>01.00.00.00-SNAPSHOT</featsoflove.model.version>
     <featsoflove.service.version>01.00.00.00-SNAPSHOT</featsoflove.service.version>
-    <notification.model.version>01.00.00.00-SNAPSHOT</notification.model.version>
-    <notification.service.version>01.00.00.00-SNAPSHOT</notification.service.version>
+    <notification.version>01.00.00.00-SNAPSHOT</notification.version>
   </properties>
 
   <dependencyManagement>
@@ -41,13 +40,18 @@
       <!-- West Enterprise API Dependencies -->
       <dependency>
         <groupId>com.wet.api</groupId>
+        <artifactId>notification-dao</artifactId>
+        <version>${notification.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.wet.api</groupId>
         <artifactId>notification-model</artifactId>
-        <version>${notification.model.version}</version>
+        <version>${notification.version}</version>
       </dependency>
       <dependency>
         <groupId>com.wet.api</groupId>
         <artifactId>notification-service</artifactId>
-        <version>${notification.service.version}</version>
+        <version>${notification.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

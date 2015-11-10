@@ -19,31 +19,22 @@
     </properties>
 
     <dependencies>
-    	<!-- West Enterprise Technologies API Dependecies -->
+    	<!-- Spring Dependecies -->
       <dependency>
-        <groupId>com.wet.api</groupId>
-        <artifactId>notification-service</artifactId>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
       </dependency>
 
+    <!-- Hibernate Dependencies -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+    </dependency>
 
-        <!-- Other Dependencies -->
-    	<!-- Spring Dependecies -->
-    	<!--#<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-		</dependency>-->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-        </dependency>
 
         <!-- JSP Dependencies -->
         <dependency>

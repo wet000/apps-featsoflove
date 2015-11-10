@@ -42,6 +42,10 @@
     <!-- West Enterprise API Dependencies -->
     <dependency>
       <groupId>com.wet.api</groupId>
+      <artifactId>notification-dao</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.wet.api</groupId>
       <artifactId>notification-model</artifactId>
     </dependency>
     <dependency>

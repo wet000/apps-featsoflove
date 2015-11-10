@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 	xmlns="http://www.springframework.org/schema/beans"
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    	xmlns:context="http://www.springframework.org/schema/context"
+    	xmlns:mvc="http://www.springframework.org/schema/mvc"
+    	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+ 							http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+ 							http://www.springframework.org/schema/beans
+ 							http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+ 							http://www.springframework.org/schema/context
+ 							http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+ 
+ 	<import resource="classpath:META-INF/spring/spring.xml"/>
+ 
+    <context:component-scan base-package="com.wet" />
+    <mvc:annotation-driven />
+    <mvc:resources mapping="/resources/**" location="/" />
+ 
+ 	<!--	R E S O L V E R S
+ 			=================	-->
+ 	<!-- Map the views to the correct file location and type -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+    
+    <!--	I N T E R C E P T O R S
+ 			=======================	-->
+    <!-- The LocaleChangeInterceptor is used by default, but you can set different properties here and other interceptors -->
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<!-- Return the name of the parameter that contains a locale specification in a locale change request -->
+			<property name="paramName" value="language" />
+		</bean>
+	</mvc:interceptors>
+
+	<!--	I N T E R N A T I O N A L I Z A T I O N
+			=======================================	-->
+	<!-- This is the default locale resolver, so this bean is not needed. 
+		 It uses the accept Header to resolve locales.
+	 -->
+ 	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver " />
+ 
+ 	<!-- Register the property files -->	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	    <property name="basenames">
+	        <list>
+	            <value>classpath:featsoflove</value>
+	            <value>classpath:subscriber</value>
+	        </list>
+	    </property>
+	    <property name="cacheSeconds" value="-1"/>
+	</bean>
+	
+	
+	<bean id="validator"
+  class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+  <property name="validationMessageSource" ref="messageSource" />
+</bean>
+ 
+</beans>
