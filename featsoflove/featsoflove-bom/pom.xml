@@ -4,7 +4,6 @@
 
   <groupId>com.wet.featsoflove</groupId>
   <artifactId>featsoflove-bom</artifactId>
-  <version>01.00.00.00-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Feats of Love BOM (Bill of Materials)</name>
