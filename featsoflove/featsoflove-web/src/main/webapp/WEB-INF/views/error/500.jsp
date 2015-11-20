@@ -8,7 +8,7 @@
 		<div id="front-cover" class="front-cover-image box-shadow-bottom">
 			<div id="front-cover-text" class="fixed-width white serif">
 				<p id="front-cover-p2" class="l25 text-shadow-dark2">Sorry, a server error occurred on our end!</p>
-				<p class="l15 w1 text-shadow-dark3">${errorMessage}</p>
+				<p class="l15 w1 text-shadow-dark3">${message}</p>
 			</div>
 		</div>
 		<jsp:include page="../footer.jsp" />

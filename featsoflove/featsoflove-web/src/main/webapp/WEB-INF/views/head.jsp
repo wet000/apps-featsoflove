@@ -6,5 +6,7 @@
 
 <link href="<c:url value="/resources/favicon.ico" />" rel="shortcut icon" >
 <link href="<c:url value="/resources/css/main.css" />?v=1.0" rel="stylesheet">
+<link href="<c:url value="/resources/css/landing-page.css" />?v=1.0" rel="stylesheet">
+<link href="<c:url value="/resources/css/footer.css" />?v=1.0.0" rel="stylesheet">
 
 <title><spring:message code="featsoflove.title"/></title>

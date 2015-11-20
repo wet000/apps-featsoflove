@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.validation.BindingResult;
 
 import com.wet.api.notification.model.Subscriber;
-import com.wet.api.notification.service.SubscriberService;
+import com.wet.featsoflove.service.FeatsOfLoveService;
 
 @Component
 @Controller
@@ -21,7 +21,7 @@ import com.wet.api.notification.service.SubscriberService;
 public class FeatsOfLoveController
 {
 	@Autowired
-	SubscriberService subscriberService;
+	FeatsOfLoveService featsOfLoveService;
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public String home(Model model)
@@ -35,7 +35,7 @@ public class FeatsOfLoveController
 	{
 		if (!result.hasErrors()) 
 		{
-			subscriberService.subscribeAndConfirm(subscriber);
+			featsOfLoveService.subscribe(subscriber);
         }
 		
 		return "home";
