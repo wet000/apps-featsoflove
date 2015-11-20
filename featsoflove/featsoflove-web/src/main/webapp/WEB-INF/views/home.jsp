@@ -27,7 +27,7 @@
 							onblur="if (this.value == '') {this.value = 'Enter Your Email';}" 
 							onfocus="if (this.value == 'Enter Your Email') {this.style.color = '#c0c0c0'; document.getElementById('optin-email').setSelectionRange(0,0);}"
 						/>
-						<form:hidden path="formId" value="11"/>
+						<form:hidden path="formId" value="1"/>
 						<input class="standard-submit l14 white" type="submit" value="Find Out How"/>
 							<form:errors element="div" class="error optin-message l12" path="email"></form:errors>
 							<c:if test="${subscriber.active}">
