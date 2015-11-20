@@ -10,12 +10,16 @@
         1.5 - Texts
         1.6 - Font Families
         1.7 - Shadows
-        1.8 - Background Images
 
 2.0 - Structure
-        2.1 - Banners
-        2.2 - Divisions
-        2.3 - Paragraphs
+        2.1 - Page
+        
+3.0 - Texts
+		3.1 - Messages
+		
+4.0 - Forms
+		4.1 - Buttons
+		4.2 - Input
 
 --------------------------------------------------------------*/
 
@@ -97,12 +101,12 @@ a.no-color,a.no-color:hover {color: inherit;}
 .l1,.l11 {font-size: 1.1em;}
 .l2,.l12 {font-size: 1.2em;}
 .l3,.l13 {font-size: 1.3em;}
-.l4,.l15 {font-size: 1.5em;}
-.l5,.l20 {font-size: 2.0em;}
-.l6,.l25 {font-size: 2.5em;}
-.l7,.l30 {font-size: 3.0em;}
-.l8,.l40 {font-size: 4.0em;}
-.l9,.l50 {font-size: 5.0em;}
+.l4,.l14 {font-size: 1.4em;}
+.l5,.l15 {font-size: 1.5em;}
+.l6,.l20 {font-size: 2.0em;}
+.l7,.l25 {font-size: 2.5em;}
+.l8,.l30 {font-size: 3.0em;}
+.l9,.l40 {font-size: 4.0em;}
 
 .s1,.s09 {font-size: 0.9em;}
 .s2,.s08 {font-size: 0.8em;}
@@ -129,56 +133,76 @@ a.no-color,a.no-color:hover {color: inherit;}
 .text-shadow-dark3 {text-shadow: 0px 0px 5px #000,0px 0px 5px #000,0px 0px 10px #000,0px 0px 20px #000,0px 0px 40px #000,0px 0px 40px #000,0px 0px 50px #000,0px 0px 50px #000,0px 0px 50px #000,0px 0px 50px #000,0px 0px 60px #000,0px 0px 60px #000;}
 
 /*--------------------------------------------------------------
-1.8 - Background Images
---------------------------------------------------------------*/
-.front-cover-image {background-image: url( ../images/front-cover.jpg );}
-
-/*--------------------------------------------------------------
 2.0 - Structural
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-2.1 - Banners
+2.1 - Page
 --------------------------------------------------------------*/
 .fixed-width {
 	margin: auto;
 	width: 1000px;
 }
 
-div#front-cover {
-	clear: both;
-	width: 100%;
-	background-position: right center;
-	background-size: cover;
-	background-repeat: no-repeat;
+/*--------------------------------------------------------------
+3.0 - Texts
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.1 - Messages
+--------------------------------------------------------------*/
+.success {
+	background-color: #005500;
 }
 
-div#front-cover {
-	border-top: 7px solid #000;
-	height: 500px;
-	background-color: #181818;
+.error {
+	background-color: #aa0000;
+}
+
+.error,
+.success {
+	padding: 10px 0px;
+	
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
 }
 
 /*--------------------------------------------------------------
-2.2 - Divisions
+4.0 - Forms
 --------------------------------------------------------------*/
-div#front-cover-text {
-	padding-top: 120px;
-	text-align: center;
+/*--------------------------------------------------------------
+4.1 - Buttons
+--------------------------------------------------------------*/
+input.standard-submit {
+	border: 0px;
+	padding: 7px 14px;
+	cursor: pointer;
+	background-color: #005500;
+	
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
 }
 
-div#footer {
-	margin-top: 50px;
-	margin-bottom: 30px;
-	text-align: center;
+input.standard-submit:focus,
+input.standard-submit:hover {
+	background-color: #006600;
 }
 
 /*--------------------------------------------------------------
-2.3 - Paragraphs
+4.2 - Inputs
 --------------------------------------------------------------*/
-p#front-cover-p1 {
-	padding-bottom: 170px;
+input.standard-input {
+	border: 1px solid #005500;
+	padding: 7px 14px;
+	
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
 }
 
-p#front-cover-p2 {
-	padding-bottom: 35px;
+input.standard-input:focus,
+input.standard-input:hover {
+    box-shadow: 0 0 5px #005500;
+    -webkit-box-shadow: 0 0 5px #005500;
+    -moz-box-shadow: 0 0 5px #005500;
 }
