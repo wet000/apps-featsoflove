@@ -5,8 +5,8 @@
 	</head>
 	<body>
 		<jsp:include page="../header.jsp" />
-		<div id="front-cover" class="front-cover-image box-shadow-bottom">
-			<div id="front-cover-text" class="fixed-width white serif">
+		<div id="front-cover-banner" class="front-cover-image box-shadow-bottom fixed-width">
+			<div id="front-cover-text" class="white serif">
 				<p class="l25 text-shadow-dark2">Oops, you are unauthorized to access that page! 401 Error</p>
 			</div>
 		</div>

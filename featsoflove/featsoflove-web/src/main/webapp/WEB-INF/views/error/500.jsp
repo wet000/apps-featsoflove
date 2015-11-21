@@ -5,8 +5,8 @@
 	</head>
 	<body>
 		<jsp:include page="../header.jsp" />
-		<div id="front-cover" class="front-cover-image box-shadow-bottom">
-			<div id="front-cover-text" class="fixed-width white serif">
+		<div id="front-cover-banner" class="front-cover-image box-shadow-bottom fixed-width">
+			<div id="front-cover-text" class="white serif">
 				<p id="front-cover-p2" class="l25 text-shadow-dark2">Sorry, a server error occurred on our end!</p>
 				<p class="l15 w1 text-shadow-dark3">${message}</p>
 			</div>
