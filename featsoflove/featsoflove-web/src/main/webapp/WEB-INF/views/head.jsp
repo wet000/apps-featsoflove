@@ -9,4 +9,6 @@
 <link href="<c:url value="/resources/css/landing-page.css" />?v=1.0" rel="stylesheet">
 <link href="<c:url value="/resources/css/footer.css" />?v=1.0.0" rel="stylesheet">
 
+<script async src="<c:url value="/resources/js/analytics.js" />?v=1.0"></script>
+
 <title><spring:message code="featsoflove.title"/></title>
