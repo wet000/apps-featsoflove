@@ -9,6 +9,11 @@
   
   <name>Feats of Love Applications</name>
   <description>Applications for Feats of Love</description>
+
+	<properties>
+		<jdk.version>1.8</jdk.version>
+		<compiler.plugin.version>3.1</compiler.plugin.version>
+	</properties>
   
   <modules>
     <module>landing-pages</module>
@@ -23,5 +28,33 @@
       </modules>
     </profile>
   </profiles>-->
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${compiler.plugin.version}</version>
+          <inherited>true</inherited>
+          <configuration>
+            <source>${jdk.version}</source>
+            <target>${jdk.version}</target>
+          </configuration>
+        </plugin>
+
+        <!-- Download Java source JARs. -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-eclipse-plugin</artifactId>
+          <configuration>
+            <downloadSources>true</downloadSources>
+            <downloadJavadocs>true</downloadJavadocs>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
   
 </project>
