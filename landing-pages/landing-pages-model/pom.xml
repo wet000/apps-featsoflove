@@ -2,22 +2,22 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
   
-    <artifactId>featsoflove-service</artifactId>
+    <artifactId>landing-pages-model</artifactId>
     <packaging>jar</packaging>
 
-    <name>Feats of Love Service Implementation</name>
-    <description>Service implementations for the Feats of Love application functionality</description>
+    <name>Feats of Love Landing Pages Models</name>
+    <description>POJO bean model objects for data storage and transportion in the Feats of Love Landing Pages application</description>
 
     <parent>
         <groupId>com.wet.featsoflove</groupId>
-        <artifactId>featsoflove</artifactId>
+        <artifactId>landing-pages</artifactId>
         <version>01.00.00.00-SNAPSHOT</version>
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
+    
     <dependencies>
     </dependencies>
 

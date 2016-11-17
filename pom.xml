@@ -2,21 +2,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-  <artifactId>applications</artifactId>
+  <groupId>com.wet.featsoflove</groupId>
+  <artifactId>featsoflove</artifactId>
   <version>01.00.00.00-SNAPSHOT</version>    
   <packaging>pom</packaging>
   
-  <name>West Enterprise Technologies Applications</name>
-  <description>Applications for West Enterprise Technologies</description>
+  <name>Feats of Love Applications</name>
+  <description>Applications for Feats of Love</description>
   
-  <parent>
-    <groupId>com.wet.api</groupId>
-    <artifactId>framework</artifactId>
-    <version>01.00.00.00-SNAPSHOT</version>    
-  </parent>
-
   <modules>
-    <module>featsoflove</module>
+    <module>landing-pages</module>
+    <!--<module>nutrition-apps</module>-->
   </modules>
   
    <!--<profiles>

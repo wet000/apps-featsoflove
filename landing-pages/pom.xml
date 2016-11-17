@@ -2,36 +2,35 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.wet.featsoflove</groupId>
-  <artifactId>featsoflove</artifactId>
+  <artifactId>landing-pages</artifactId>
   <packaging>pom</packaging>
 
-  <name>Feats of Love</name>
-  <description>Parent aggregator project to build modules to support the Feats of Love application</description>
+  <name>Feats of Love Landing Pages</name>
+  <description>Parent aggregator project to build modules to support the Feats of Love Landing Pages project</description>
 
   <parent>
-    <groupId>com.wet.api</groupId>
-    <artifactId>applications</artifactId>
+    <groupId>com.wet.featsoflove</groupId>
+    <artifactId>featsoflove</artifactId>
     <version>01.00.00.00-SNAPSHOT</version>    
   </parent>
 
   <modules>
-    <module>featsoflove-bom</module>
-    <module>featsoflove-model</module>
-    <module>featsoflove-service</module>
-    <module>featsoflove-web</module>
+    <module>landing-pages-bom</module>
+    <module>landing-pages-model</module>
+    <module>landing-pages-service</module>
+    <module>landing-pages-web</module>
   </modules>
 
   <properties>
-    <featsoflove.bom.version>01.00.00.00-SNAPSHOT</featsoflove.bom.version>
+    <landing.pages.bom.version>01.00.00.00-SNAPSHOT</landing.pages.bom.version>
   </properties>
     
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>com.wet.featsoflove</groupId>
-        <artifactId>featsoflove-bom</artifactId>
-        <version>${featsoflove.bom.version}</version>
+        <artifactId>landing-pages-bom</artifactId>
+        <version>${landing.pages.bom.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

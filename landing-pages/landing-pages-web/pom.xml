@@ -2,15 +2,15 @@
 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
-  <artifactId>featsoflove-web</artifactId>
+  <artifactId>landing-pages-web</artifactId>
   <packaging>war</packaging>
 
-  <name>Feats of Love Web Application</name>
-  <description>Feats of Love web application for its blog located at http://featsoflove.com</description>
+  <name>Feats of Love Landing Pages Web Application</name>
+  <description>Feats of Love landing pages web application for its coming soon page located at http://featsoflove.com</description>
 
   <parent>
     <groupId>com.wet.featsoflove</groupId>
-    <artifactId>featsoflove</artifactId>
+    <artifactId>landing-pages</artifactId>
     <version>01.00.00.00-SNAPSHOT</version>
   </parent>
 
@@ -19,11 +19,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
   </properties>
 
   <dependencies>
-    <!-- Feats of Love Dependencies -->
+    <!-- Landing Pages Dependencies -->
     <dependency>
       <groupId>com.wet.featsoflove</groupId>
-      <artifactId>featsoflove-service</artifactId>
+      <artifactId>landing-pages-service</artifactId>
     </dependency>
+
     <!-- Spring Dependecies -->
     <dependency>
       <groupId>org.springframework</groupId>
