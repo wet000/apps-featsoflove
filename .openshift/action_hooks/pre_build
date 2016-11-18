@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "############################### Setting the JAVA HOME"
+echo "############################### Setting the JAVA HOME!"
 export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
 export PATH=${JAVA_HOME}/bin:${PATH}
 echo "############################### Done setting JAVA HOME"
