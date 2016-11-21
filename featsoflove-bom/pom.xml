@@ -3,17 +3,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.wet.featsoflove</groupId>
-  <artifactId>landing-pages-bom</artifactId>
+  <artifactId>featsoflove-bom</artifactId>
   <packaging>pom</packaging>
 
-  <name>Feats of Love Landing Pages BOM (Bill of Materials)</name>
-  <description>BOM for easy dependency management of Feats of Love Landing Pages dependencies</description>
+  <name>Feats of Love BOM (Bill of Materials)</name>
+  <description>BOM for easy dependency management of Feats of Love dependencies</description>
 
   <parent>
-    <groupId>com.wet.featsoflove</groupId>
-    <artifactId>featsoflove-bom</artifactId>
+    <groupId>com.wet.api</groupId>
+    <artifactId>common-bom</artifactId>
     <version>01.00.00.00-SNAPSHOT</version>
-		<!--<relativePath>../../featsoflove-bom/</relativePath>-->
+		<relativePath></relativePath>
   </parent>
 
   <properties>
@@ -25,7 +25,7 @@
   <dependencyManagement>
     <dependencies>
       <!-- Landing Pages Dependencies -->
-      <!--<dependency>
+      <dependency>
         <groupId>com.wet.featsoflove</groupId>
         <artifactId>landing-pages-model</artifactId>
         <version>${landing.pages.version}</version>
@@ -39,10 +39,10 @@
         <groupId>com.wet.featsoflove</groupId>
         <artifactId>landing-pages-web</artifactId>
         <version>${landing.pages.version}</version>
-      </dependency>-->
+      </dependency>
 
       <!-- West Enterprise API Dependencies -->
-      <dependency>
+      <!--<dependency>
         <groupId>com.wet.api</groupId>
         <artifactId>notification-dao</artifactId>
         <version>${notification.version}</version>
@@ -56,15 +56,15 @@
         <groupId>com.wet.api</groupId>
         <artifactId>notification-service</artifactId>
         <version>${notification.version}</version>
-      </dependency>
+      </dependency>-->
 
       <!-- Other Dependencies -->
       <!-- Needed for jsp taglibs -->
-      <!--<dependency>
+      <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
         <version>${javax.servlet.api.version}</version>
-      </dependency>-->
+      </dependency>        
     </dependencies>
   </dependencyManagement>
 

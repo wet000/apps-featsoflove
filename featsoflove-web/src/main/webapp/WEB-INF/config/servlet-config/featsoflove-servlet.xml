@@ -39,6 +39,7 @@
 	    <property name="basenames">
 	        <list>
 	            <value>classpath:featsoflove</value>
+	            <value>classpath:landing-pages</value>
 	            <value>classpath:subscriber</value>
 	        </list>
 	    </property>

@@ -12,12 +12,12 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import com.wet.api.notification.model.Subscriber;
 import com.wet.api.notification.service.SubscriberService;
-import com.wet.featsoflove.service.impl.FeatsOfLoveServiceImpl;
+import com.wet.featsoflove.service.impl.LandingPagesServiceImpl;
 
 @RunWith(MockitoJUnitRunner.class)
-public class FeatsOfLoveServiceImplTest 
+public class LandingPagesServiceImplTest 
 {
-	private FeatsOfLoveService featsOfLoveService;
+	private LandingPagesService landingPagesService;
 
 	@Mock
 	private SubscriberService mockSubscriberService;
@@ -25,8 +25,8 @@ public class FeatsOfLoveServiceImplTest
 	@Before
 	public void setup()
 	{
-		featsOfLoveService = new FeatsOfLoveServiceImpl();
-		Whitebox.setInternalState(featsOfLoveService, "subscriberService", mockSubscriberService);
+		landingPagesService = new LandingPagesServiceImpl();
+		Whitebox.setInternalState(landingPagesService, "subscriberService", mockSubscriberService);
 	}
 	
 	@Test
@@ -35,7 +35,7 @@ public class FeatsOfLoveServiceImplTest
 		Subscriber subscriber = new Subscriber();
 		
 		doNothing().when(mockSubscriberService).subscribeAndConfirm(subscriber);
-		featsOfLoveService.subscribe(subscriber);
+		landingPagesService.subscribe(subscriber);
 		
 		verify(mockSubscriberService).subscribeAndConfirm(subscriber);
 	}

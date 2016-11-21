@@ -19,15 +19,15 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.validation.BindingResult;
 
 import com.wet.api.notification.model.Subscriber;
-import com.wet.featsoflove.service.FeatsOfLoveService;
+import com.wet.featsoflove.service.LandingPagesService;
 
 @RunWith(MockitoJUnitRunner.class)
-public class FeatsOfLoveControllerTest 
+public class LandingPagesControllerTest 
 {
-	private FeatsOfLoveController featsOfLoveController;
+	private LandingPagesController landingPagesController;
 
 	@Mock
-	private FeatsOfLoveService mockFeatsOfLoveService;
+	private LandingPagesService mockLandingPagesService;
 	
 	@Mock
 	private BindingResult mockBindingResult;
@@ -35,20 +35,20 @@ public class FeatsOfLoveControllerTest
 	@Before
 	public void setup()
 	{
-		featsOfLoveController = new FeatsOfLoveController();
-		Whitebox.setInternalState(featsOfLoveController, "featsOfLoveService", mockFeatsOfLoveService);
+		landingPagesController = new LandingPagesController();
+		Whitebox.setInternalState(landingPagesController, "landingPagesService", mockLandingPagesService);
 	}
 	
 	@Test
 	public void testSubscribe()
 	{
 		Subscriber subscriber = new Subscriber();
-		doNothing().when(mockFeatsOfLoveService).subscribe(subscriber);
+		doNothing().when(mockLandingPagesService).subscribe(subscriber);
 		
-		String page = featsOfLoveController.subscribe(subscriber, mockBindingResult);
+		String page = landingPagesController.subscribe(subscriber, mockBindingResult);
 		
 		assertThat(page, is(equalTo("home")));
-		verify(mockFeatsOfLoveService).subscribe(subscriber);
+		verify(mockLandingPagesService).subscribe(subscriber);
 	}
 	
 	@Test
@@ -57,9 +57,9 @@ public class FeatsOfLoveControllerTest
 		Subscriber subscriber = new Subscriber();
 		when(mockBindingResult.hasErrors()).thenReturn(true);
 		
-		String page = featsOfLoveController.subscribe(subscriber, mockBindingResult);
+		String page = landingPagesController.subscribe(subscriber, mockBindingResult);
 		
 		assertThat(page, is(equalTo("home")));
-		verify(mockFeatsOfLoveService, never()).subscribe(subscriber);
+		verify(mockLandingPagesService, never()).subscribe(subscriber);
 	}
 }

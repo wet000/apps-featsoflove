@@ -5,13 +5,13 @@ import org.springframework.stereotype.Component;
 
 import com.wet.api.notification.model.Subscriber;
 import com.wet.api.notification.service.SubscriberService;
-import com.wet.featsoflove.service.FeatsOfLoveService;
+import com.wet.featsoflove.service.LandingPagesService;
 
 @Component
-public class FeatsOfLoveServiceImpl implements FeatsOfLoveService
+public class LandingPagesServiceImpl implements LandingPagesService
 {
 	@Autowired
-	SubscriberService subscriberService;
+	private SubscriberService subscriberService;
 	
 	@Override
 	public void subscribe(Subscriber subscriber)

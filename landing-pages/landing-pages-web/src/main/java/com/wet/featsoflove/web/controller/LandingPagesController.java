@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.validation.BindingResult;
 
 import com.wet.api.notification.model.Subscriber;
-import com.wet.featsoflove.service.FeatsOfLoveService;
+import com.wet.featsoflove.service.LandingPagesService;
 
 @Component
 @Controller
 @RequestMapping(value={"","/","/home"})
-public class FeatsOfLoveController
+public class LandingPagesController
 {
 	@Autowired
-	FeatsOfLoveService featsOfLoveService;
+	private LandingPagesService landingPagesService;
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public String home(Model model)
@@ -35,7 +35,7 @@ public class FeatsOfLoveController
 	{
 		if (!result.hasErrors()) 
 		{
-			featsOfLoveService.subscribe(subscriber);
+			landingPagesService.subscribe(subscriber);
         }
 		
 		return "home";

@@ -16,7 +16,7 @@ import com.wet.api.notification.model.Subscriber;
 import com.wet.api.notification.service.exception.DuplicateSubscriberException;
 
 @ControllerAdvice
-public class FeatsOfLoveControllerAdvice 
+public class LandingPagesControllerAdvice 
 {
 	private static final String ATTRIBUTE_SUBSCRIBER = "subscriber";
 	private static final String ATTRIBUTE_MESSAGE = "message";
