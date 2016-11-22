@@ -30,6 +30,13 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     	<artifactId>landing-pages-web</artifactId>
     </dependency>
 
+		<!-- Nutrition Apps Dependencies -->
+    <dependency>
+    	<groupId>com.wet.featsoflove</groupId>
+    	<artifactId>nutrition-apps-web</artifactId>
+    </dependency>
+	
+
     <!-- Spring Dependecies -->
     <dependency>
       <groupId>org.springframework</groupId>
