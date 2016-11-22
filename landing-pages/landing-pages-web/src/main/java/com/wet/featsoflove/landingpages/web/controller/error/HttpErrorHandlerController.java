@@ -1,4 +1,4 @@
-package com.wet.featsoflove.web.controller.error;
+package com.wet.featsoflove.landingpages.web.controller.error;
 
 import java.io.File;
 

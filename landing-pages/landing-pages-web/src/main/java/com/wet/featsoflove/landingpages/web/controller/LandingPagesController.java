@@ -1,4 +1,4 @@
-package com.wet.featsoflove.web.controller;
+package com.wet.featsoflove.landingpages.web.controller;
 
 import javax.validation.Valid;
 

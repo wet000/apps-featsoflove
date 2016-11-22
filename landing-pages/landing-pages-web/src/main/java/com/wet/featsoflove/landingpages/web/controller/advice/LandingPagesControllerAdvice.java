@@ -1,4 +1,4 @@
-package com.wet.featsoflove.web.controller.advice;
+package com.wet.featsoflove.landingpages.web.controller.advice;
 
 import java.io.File;
 
