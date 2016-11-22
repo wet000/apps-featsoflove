@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>nutrition-apps</artifactId>
+  <packaging>pom</packaging>
+
+  <name>Feats of Love Nutrition Apps</name>
+  <description>Parent aggregator project to build modules to support the Feats of Love Nutrition Apps project</description>
+
+  <parent>
+    <groupId>com.wet.featsoflove</groupId>
+    <artifactId>featsoflove</artifactId>
+    <version>01.00.00.00-SNAPSHOT</version>    
+  </parent>
+
+  <modules>
+    <module>nutrition-apps-bom</module>
+    <module>nutrition-apps-web</module>
+  </modules>
+
+  <properties>
+    <nutrition.apps.bom.version>01.00.00.00-SNAPSHOT</nutrition.apps.bom.version>
+  </properties>
+    
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.wet.featsoflove</groupId>
+        <artifactId>nutrition-apps-bom</artifactId>
+        <version>${nutrition.apps.bom.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <!-- West Enterprise API Dependencies -->
+
+    <!-- Testing -->
+    	
+    <!-- Other Dependencies -->
+  </dependencies>  
+
+</project>

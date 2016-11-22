@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+  
+    <artifactId>nutrition-apps-web</artifactId>
+    <packaging>jar</packaging>
+	
+  	<name>Feats of Love Nutrition Apps Web Application</name>
+  	<description>Feats of Love nutrition apps web application</description>
+
+    <parent>
+        <groupId>com.wet.featsoflove</groupId>
+        <artifactId>nutrition-apps</artifactId>
+        <version>01.00.00.00-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+  <dependencies>
+    <!-- Spring Dependecies -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+    </dependency>
+
+    <!-- JSP Dependencies -->
+	<!-- <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+    </dependency>-->
+
+    <!-- Other Dependencies -->
+    <!--<dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>-->
+  </dependencies>
+
+</project>

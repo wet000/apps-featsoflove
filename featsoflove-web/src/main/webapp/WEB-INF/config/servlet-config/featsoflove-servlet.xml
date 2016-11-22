@@ -40,6 +40,7 @@
 	        <list>
 	            <value>classpath:featsoflove</value>
 	            <value>classpath:landing-pages</value>
+	            <value>classpath:nutrition-apps</value>
 	            <value>classpath:subscriber</value>
 	        </list>
 	    </property>

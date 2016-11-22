@@ -20,7 +20,7 @@
     <module>landing-pages</module>
     <module>featsoflove-bom</module>
     <module>featsoflove-web</module>
-    <!--<module>nutrition-apps</module>-->
+    <module>nutrition-apps</module>
   </modules>
 
   <dependencyManagement>
