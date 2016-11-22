@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+  
+    <artifactId>landing-pages-web</artifactId>
+    <packaging>jar</packaging>
+	
+  	<name>Feats of Love Landing Pages Web Application</name>
+  	<description>Feats of Love landing pages web application</description>
+
+    <parent>
+        <groupId>com.wet.featsoflove</groupId>
+        <artifactId>landing-pages</artifactId>
+        <version>01.00.00.00-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+  <dependencies>
+    <!-- Landing Pages Dependencies -->
+    <dependency>
+      <groupId>com.wet.featsoflove</groupId>
+      <artifactId>landing-pages-service</artifactId>
+    </dependency>
+
+    <!-- Spring Dependecies -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+    </dependency>
+
+    <!-- Hibernate Dependencies -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+    </dependency>
+
+    <!-- JSP Dependencies -->
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+    </dependency>
+
+    <!-- Other Dependencies -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>

@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>landing-pages-bom</artifactId>
+  <packaging>pom</packaging>
+
+  <name>Feats of Love Landing Pages BOM (Bill of Materials)</name>
+  <description>BOM for easy dependency management of Feats of Love Landing Pages dependencies</description>
+
+  <parent>
+    <groupId>com.wet.featsoflove</groupId>
+    <artifactId>featsoflove-bom</artifactId>
+    <version>01.00.00.00-SNAPSHOT</version>
+		<relativePath>../../featsoflove-bom/</relativePath>
+  </parent>
+
+  <properties>
+    <landing.pages.version>01.00.00.00-SNAPSHOT</landing.pages.version>
+    <javax.servlet.api.version>3.1.0</javax.servlet.api.version>
+    <notification.version>01.00.00.00-SNAPSHOT</notification.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Landing Pages Dependencies -->
+      <!--<dependency>
+        <groupId>com.wet.featsoflove</groupId>
+        <artifactId>landing-pages-model</artifactId>
+        <version>${landing.pages.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.wet.featsoflove</groupId>
+        <artifactId>landing-pages-service</artifactId>
+        <version>${landing.pages.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.wet.featsoflove</groupId>
+        <artifactId>landing-pages-web</artifactId>
+        <version>${landing.pages.version}</version>
+      </dependency>-->
+
+      <!-- West Enterprise API Dependencies -->
+      <dependency>
+        <groupId>com.wet.api</groupId>
+        <artifactId>notification-dao</artifactId>
+        <version>${notification.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.wet.api</groupId>
+        <artifactId>notification-model</artifactId>
+        <version>${notification.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.wet.api</groupId>
+        <artifactId>notification-service</artifactId>
+        <version>${notification.version}</version>
+      </dependency>
+
+      <!-- Other Dependencies -->
+      <!-- Needed for jsp taglibs -->
+      <!--<dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>${javax.servlet.api.version}</version>
+      </dependency>-->
+    </dependencies>
+  </dependencyManagement>
+
+</project>

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "############################### Setting the JAVA HOME!"
+export JAVA_HOME=/etc/alternatives/java_sdk_1.7.0
+export PATH=${JAVA_HOME}/bin:${PATH}
+echo "############################### Done setting JAVA HOME"
+echo $JAVA_HOME
+echo $PATH
+echo "############################### Done echoing"

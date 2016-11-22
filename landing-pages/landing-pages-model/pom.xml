@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+  
+    <artifactId>landing-pages-model</artifactId>
+    <packaging>jar</packaging>
+
+    <name>Feats of Love Landing Pages Models</name>
+    <description>POJO bean model objects for data storage and transportion in the Feats of Love Landing Pages application</description>
+
+    <parent>
+        <groupId>com.wet.featsoflove</groupId>
+        <artifactId>landing-pages</artifactId>
+        <version>01.00.00.00-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <dependencies>
+    </dependencies>
+
+</project>
