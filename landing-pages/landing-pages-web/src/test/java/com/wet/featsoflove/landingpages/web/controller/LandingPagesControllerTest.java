@@ -19,7 +19,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.validation.BindingResult;
 
 import com.wet.api.notification.model.Subscriber;
-import com.wet.featsoflove.service.LandingPagesService;
+import com.wet.featsoflove.landingpages.service.LandingPagesService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class LandingPagesControllerTest 
