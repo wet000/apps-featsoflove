@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+  
+    <artifactId>nutrition-apps-service</artifactId>
+    <packaging>jar</packaging>
+
+    <name>Feats of Love Nutrition Apps Service Implementations</name>
+    <description>Service implementations for the Feats of Love nutrition apps application functionality</description>
+
+    <parent>
+        <groupId>com.wet.featsoflove</groupId>
+        <artifactId>nutrition-apps</artifactId>
+        <version>01.00.00.00-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+    </dependencies>
+
+</project>
