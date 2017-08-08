@@ -16,10 +16,32 @@
   </parent>
 
   <properties>
+		<nutrition.version>01.00.00.00-SNAPSHOT</nutrition.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
+      <!-- West Enterprise API Dependencies -->
+      <dependency>
+        <groupId>com.wet.api</groupId>
+        <artifactId>nutrition-model</artifactId>
+        <version>${nutrition.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.wet.api</groupId>
+        <artifactId>nutrition-dao</artifactId>
+        <version>${nutrition.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.wet.api</groupId>
+        <artifactId>nutrition-rest</artifactId>
+        <version>${nutrition.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.wet.api</groupId>
+        <artifactId>nutrition-service</artifactId>
+        <version>${nutrition.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 

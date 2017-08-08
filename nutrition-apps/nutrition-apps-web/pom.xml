@@ -19,6 +19,12 @@
     </properties>
 
   <dependencies>
+    <!-- Nutrition Apps Dependencies -->
+    <dependency>
+      <groupId>com.wet.featsoflove</groupId>
+      <artifactId>nutrition-apps-service</artifactId>
+    </dependency>
+
     <!-- Spring Dependecies -->
     <dependency>
       <groupId>org.springframework</groupId>

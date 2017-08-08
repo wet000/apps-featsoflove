@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.wet.featsoflove</groupId>
@@ -13,7 +13,7 @@
     <groupId>com.wet.api</groupId>
     <artifactId>common-bom</artifactId>
     <version>01.00.00.00-SNAPSHOT</version>
-		<relativePath>../../../../components/common/common-bom/</relativePath>
+    <relativePath>../../../../components/common/common-bom/</relativePath>
   </parent>
 
   <properties>
@@ -42,10 +42,15 @@
         <version>${landing.pages.version}</version>
       </dependency>
 
-			<!-- Nutrition Apps Dependencies -->
-			<dependency>
+      <!-- Nutrition Apps Dependencies -->
+      <dependency>
         <groupId>com.wet.featsoflove</groupId>
         <artifactId>nutrition-apps-web</artifactId>
+        <version>${nutrition.apps.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.wet.featsoflove</groupId>
+        <artifactId>nutrition-apps-service</artifactId>
         <version>${nutrition.apps.version}</version>
       </dependency>
 
@@ -54,17 +59,17 @@
         <groupId>com.wet.api</groupId>
         <artifactId>notification-dao</artifactId>
         <version>${notification.version}</version>
-      </dependency>
-      <dependency>
+        </dependency>
+        <dependency>
         <groupId>com.wet.api</groupId>
         <artifactId>notification-model</artifactId>
         <version>${notification.version}</version>
-      </dependency>
-      <dependency>
+        </dependency>
+        <dependency>
         <groupId>com.wet.api</groupId>
         <artifactId>notification-service</artifactId>
         <version>${notification.version}</version>
-      </dependency>-->
+        </dependency> -->
 
       <!-- Other Dependencies -->
       <!-- Needed for jsp taglibs -->
@@ -72,7 +77,7 @@
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
         <version>${javax.servlet.api.version}</version>
-      </dependency>        
+      </dependency>
     </dependencies>
   </dependencyManagement>
 

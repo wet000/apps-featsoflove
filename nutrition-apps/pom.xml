@@ -16,6 +16,7 @@
 
   <modules>
     <module>nutrition-apps-bom</module>
+    <module>nutrition-apps-service</module>
     <module>nutrition-apps-web</module>
   </modules>
 
@@ -37,6 +38,22 @@
 
   <dependencies>
     <!-- West Enterprise API Dependencies -->
+    <dependency>
+      <groupId>com.wet.api</groupId>
+      <artifactId>nutrition-model</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.wet.api</groupId>
+      <artifactId>nutrition-dao</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.wet.api</groupId>
+      <artifactId>nutrition-rest</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.wet.api</groupId>
+      <artifactId>nutrition-service</artifactId>
+    </dependency>
 
     <!-- Testing -->
     	
