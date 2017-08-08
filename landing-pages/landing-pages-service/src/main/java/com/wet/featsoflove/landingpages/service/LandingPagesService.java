@@ -1,4 +1,4 @@
-package com.wet.featsoflove.service;
+package com.wet.featsoflove.landingpages.service;
 
 import com.wet.api.notification.model.Subscriber;
 

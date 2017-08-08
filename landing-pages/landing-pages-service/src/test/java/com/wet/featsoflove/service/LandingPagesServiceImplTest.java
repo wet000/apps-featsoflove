@@ -12,7 +12,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import com.wet.api.notification.model.Subscriber;
 import com.wet.api.notification.service.SubscriberService;
-import com.wet.featsoflove.service.impl.LandingPagesServiceImpl;
+import com.wet.featsoflove.landingpages.service.LandingPagesService;
+import com.wet.featsoflove.landingpages.service.impl.LandingPagesServiceImpl;
 
 @RunWith(MockitoJUnitRunner.class)
 public class LandingPagesServiceImplTest 

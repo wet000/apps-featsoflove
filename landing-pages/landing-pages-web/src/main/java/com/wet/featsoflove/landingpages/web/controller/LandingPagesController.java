@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.validation.BindingResult;
 
 import com.wet.api.notification.model.Subscriber;
-import com.wet.featsoflove.service.LandingPagesService;
+import com.wet.featsoflove.landingpages.service.LandingPagesService;
 
 @Component
 @Controller
